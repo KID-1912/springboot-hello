@@ -681,3 +681,414 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 2024-07-04T12:29:24.095+08:00  INFO 13976 --- [http-nio-8080-exec-1] c.i.learnjava.web.UserController         : user register: heyutongxue@gmail.com
 2024-07-04T14:05:09.017+08:00  INFO 13976 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-07-04T14:05:09.019+08:00  INFO 13976 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-04T15:39:33.019+08:00  INFO 7088 --- [restartedMain] com.itranswarp.learnjava.Application     : Starting Application using Java 21.0.2 with PID 7088 (D:\后端\springboot-hello\target\classes started by 黑羽同学 in D:\后端\springboot-hello)
+2024-07-04T15:39:33.021+08:00  INFO 7088 --- [restartedMain] com.itranswarp.learnjava.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-07-04T15:39:33.057+08:00  INFO 7088 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-04T15:39:33.057+08:00  INFO 7088 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-04T15:39:33.123+08:00  WARN 7088 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: file [D:\后端\springboot-hello\target\classes\com\itranswarp\learnjava\Application$1.class]
+2024-07-04T15:39:33.151+08:00 ERROR 7088 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: file [D:\后端\springboot-hello\target\classes\com\itranswarp\learnjava\Application$1.class]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:462)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:316)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:276)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:290)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:244)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:197)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:165)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:397)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:283)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:745)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:565)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.itranswarp.learnjava.Application.main(Application.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.io.IOException: ASM ClassReader failed to parse class file - probably due to a new Java class file version that isn't supported yet: file [D:\后端\springboot-hello\target\classes\com\itranswarp\learnjava\Application$1.class]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:59)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.core.type.classreading.CachingMetadataReaderFactory.getMetadataReader(CachingMetadataReaderFactory.java:122)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:434)
+	... 23 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 65
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:199)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:180)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:166)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:287)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:56)
+	... 27 common frames omitted
+
+2024-07-04T15:40:08.626+08:00  INFO 10384 --- [restartedMain] com.itranswarp.learnjava.Application     : Starting Application using Java 21.0.2 with PID 10384 (D:\后端\springboot-hello\target\classes started by 黑羽同学 in D:\后端\springboot-hello)
+2024-07-04T15:40:08.629+08:00  INFO 10384 --- [restartedMain] com.itranswarp.learnjava.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-07-04T15:40:08.674+08:00  INFO 10384 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-04T15:40:08.674+08:00  INFO 10384 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-04T15:40:09.597+08:00  INFO 10384 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-07-04T15:40:09.607+08:00  INFO 10384 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-04T15:40:09.607+08:00  INFO 10384 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2024-07-04T15:40:09.657+08:00  INFO 10384 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-04T15:40:09.658+08:00  INFO 10384 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 979 ms
+2024-07-04T15:40:09.755+08:00  WARN 10384 --- [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2024-07-04T15:40:09.756+08:00  INFO 10384 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-04T15:40:10.067+08:00  INFO 10384 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2024-07-04T15:40:10.067+08:00  INFO 10384 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.hsqldb.jdbc.JDBCConnection@5d29095f
+2024-07-04T15:40:10.073+08:00  INFO 10384 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-04T15:40:10.362+08:00  INFO 10384 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-04T15:40:10.373+08:00  WARN 10384 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-07-04T15:40:10.375+08:00  INFO 10384 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-04T15:40:10.379+08:00  INFO 10384 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-04T15:40:10.382+08:00  INFO 10384 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-04T15:40:10.390+08:00  INFO 10384 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-04T15:40:10.402+08:00 ERROR 10384 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2024-07-04T15:40:36.004+08:00  INFO 10792 --- [restartedMain] com.itranswarp.learnjava.Application     : Starting Application using Java 21.0.2 with PID 10792 (D:\后端\springboot-hello\target\classes started by 黑羽同学 in D:\后端\springboot-hello)
+2024-07-04T15:40:36.007+08:00  INFO 10792 --- [restartedMain] com.itranswarp.learnjava.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-07-04T15:40:36.045+08:00  INFO 10792 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-04T15:40:36.046+08:00  INFO 10792 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-04T15:40:36.850+08:00  INFO 10792 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-07-04T15:40:36.857+08:00  INFO 10792 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-04T15:40:36.858+08:00  INFO 10792 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2024-07-04T15:40:36.902+08:00  INFO 10792 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-04T15:40:36.904+08:00  INFO 10792 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 856 ms
+2024-07-04T15:40:36.982+08:00  WARN 10792 --- [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2024-07-04T15:40:36.983+08:00  INFO 10792 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-04T15:40:37.251+08:00  INFO 10792 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2024-07-04T15:40:37.252+08:00  INFO 10792 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.hsqldb.jdbc.JDBCConnection@62a12ef4
+2024-07-04T15:40:37.253+08:00  INFO 10792 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-04T15:40:37.541+08:00  INFO 10792 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-04T15:40:37.565+08:00  INFO 10792 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-07-04T15:40:37.574+08:00  INFO 10792 --- [restartedMain] com.itranswarp.learnjava.Application     : Started Application in 1.839 seconds (process running for 2.315)
+2024-07-04T15:41:59.296+08:00  INFO 10792 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-04T15:41:59.297+08:00  INFO 10792 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-04T15:41:59.298+08:00  INFO 10792 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-04T15:42:38.299+08:00  INFO 10792 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-04T15:42:38.302+08:00  INFO 10792 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-04T15:42:52.267+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : Starting Application using Java 21.0.2 with PID 16512 (D:\后端\springboot-hello\target\classes started by 黑羽同学 in D:\后端\springboot-hello)
+2024-07-04T15:42:52.270+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-07-04T15:42:52.312+08:00  INFO 16512 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-04T15:42:52.313+08:00  INFO 16512 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-04T15:42:53.158+08:00  INFO 16512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-07-04T15:42:53.166+08:00  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-04T15:42:53.167+08:00  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2024-07-04T15:42:53.210+08:00  INFO 16512 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-04T15:42:53.212+08:00  INFO 16512 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 898 ms
+2024-07-04T15:42:53.298+08:00  WARN 16512 --- [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2024-07-04T15:42:53.299+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-04T15:42:53.569+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2024-07-04T15:42:53.570+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.hsqldb.jdbc.JDBCConnection@290393cc
+2024-07-04T15:42:53.571+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-04T15:42:53.854+08:00  INFO 16512 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-04T15:42:53.876+08:00  INFO 16512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-07-04T15:42:53.883+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : Started Application in 1.884 seconds (process running for 2.364)
+2024-07-04T15:45:28.299+08:00  INFO 16512 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 7 class path changes (0 additions, 6 deletions, 1 modification)
+2024-07-04T15:45:28.304+08:00  INFO 16512 --- [Thread-6] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-04T15:45:28.315+08:00  INFO 16512 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-04T15:45:28.318+08:00  INFO 16512 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-04T15:45:28.394+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : Starting Application using Java 21.0.2 with PID 16512 (D:\后端\springboot-hello\target\classes started by 黑羽同学 in D:\后端\springboot-hello)
+2024-07-04T15:45:28.395+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-07-04T15:45:28.642+08:00  INFO 16512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-07-04T15:45:28.643+08:00  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-04T15:45:28.644+08:00  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2024-07-04T15:45:28.662+08:00  INFO 16512 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-04T15:45:28.662+08:00  INFO 16512 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 265 ms
+2024-07-04T15:45:28.683+08:00  WARN 16512 --- [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-2 - idleTimeout is close to or more than maxLifetime, disabling it.
+2024-07-04T15:45:28.684+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-07-04T15:45:28.685+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Driver does not support get/set network timeout for connections. (feature not supported)
+2024-07-04T15:45:28.685+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.hsqldb.jdbc.JDBCConnection@5652eeb3
+2024-07-04T15:45:28.685+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-07-04T15:45:28.783+08:00  INFO 16512 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-04T15:45:28.791+08:00  INFO 16512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-07-04T15:45:28.793+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : Started Application in 0.427 seconds (process running for 157.274)
+2024-07-04T15:45:28.794+08:00  INFO 16512 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-07-04T15:45:30.204+08:00  INFO 16512 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 6 class path changes (6 additions, 0 deletions, 0 modifications)
+2024-07-04T15:45:30.206+08:00  INFO 16512 --- [Thread-8] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-04T15:45:30.210+08:00  INFO 16512 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-07-04T15:45:30.213+08:00  INFO 16512 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-07-04T15:45:30.271+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : Starting Application using Java 21.0.2 with PID 16512 (D:\后端\springboot-hello\target\classes started by 黑羽同学 in D:\后端\springboot-hello)
+2024-07-04T15:45:30.271+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-07-04T15:45:30.432+08:00  INFO 16512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-07-04T15:45:30.433+08:00  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-04T15:45:30.433+08:00  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2024-07-04T15:45:30.467+08:00  INFO 16512 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-04T15:45:30.468+08:00  INFO 16512 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 196 ms
+2024-07-04T15:45:30.484+08:00  WARN 16512 --- [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-3 - idleTimeout is close to or more than maxLifetime, disabling it.
+2024-07-04T15:45:30.485+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-07-04T15:45:30.485+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Driver does not support get/set network timeout for connections. (feature not supported)
+2024-07-04T15:45:30.485+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.hsqldb.jdbc.JDBCConnection@d2b72d
+2024-07-04T15:45:30.486+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-07-04T15:45:30.549+08:00  INFO 16512 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-04T15:45:30.554+08:00  INFO 16512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-07-04T15:45:30.556+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : Started Application in 0.308 seconds (process running for 159.038)
+2024-07-04T15:45:30.557+08:00  INFO 16512 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-07-04T15:45:40.502+08:00  INFO 16512 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-07-04T15:45:40.505+08:00  INFO 16512 --- [Thread-12] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-04T15:45:40.508+08:00  INFO 16512 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-07-04T15:45:40.511+08:00  INFO 16512 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-07-04T15:45:40.565+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : Starting Application using Java 21.0.2 with PID 16512 (D:\后端\springboot-hello\target\classes started by 黑羽同学 in D:\后端\springboot-hello)
+2024-07-04T15:45:40.566+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-07-04T15:45:40.690+08:00  INFO 16512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-07-04T15:45:40.691+08:00  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-04T15:45:40.691+08:00  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2024-07-04T15:45:40.708+08:00  INFO 16512 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-04T15:45:40.708+08:00  INFO 16512 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 141 ms
+2024-07-04T15:45:40.723+08:00  WARN 16512 --- [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-4 - idleTimeout is close to or more than maxLifetime, disabling it.
+2024-07-04T15:45:40.723+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-07-04T15:45:40.724+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Driver does not support get/set network timeout for connections. (feature not supported)
+2024-07-04T15:45:40.724+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.hsqldb.jdbc.JDBCConnection@3c60733e
+2024-07-04T15:45:40.724+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-07-04T15:45:40.780+08:00  INFO 16512 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-04T15:45:40.785+08:00  INFO 16512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-07-04T15:45:40.788+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : Started Application in 0.242 seconds (process running for 169.269)
+2024-07-04T15:45:40.788+08:00  INFO 16512 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-07-04T15:46:05.888+08:00  INFO 16512 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-07-04T15:46:05.890+08:00  INFO 16512 --- [Thread-16] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-04T15:46:05.894+08:00  INFO 16512 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-07-04T15:46:05.897+08:00  INFO 16512 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-07-04T15:46:05.957+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : Starting Application using Java 21.0.2 with PID 16512 (D:\后端\springboot-hello\target\classes started by 黑羽同学 in D:\后端\springboot-hello)
+2024-07-04T15:46:05.958+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-07-04T15:46:06.077+08:00  INFO 16512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-07-04T15:46:06.078+08:00  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-04T15:46:06.078+08:00  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2024-07-04T15:46:06.095+08:00  INFO 16512 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-04T15:46:06.096+08:00  INFO 16512 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 135 ms
+2024-07-04T15:46:06.114+08:00  WARN 16512 --- [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-5 - idleTimeout is close to or more than maxLifetime, disabling it.
+2024-07-04T15:46:06.115+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-07-04T15:46:06.115+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-5 - Driver does not support get/set network timeout for connections. (feature not supported)
+2024-07-04T15:46:06.116+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.hsqldb.jdbc.JDBCConnection@3ca77f8f
+2024-07-04T15:46:06.116+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-07-04T15:46:06.187+08:00  INFO 16512 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-04T15:46:06.193+08:00  INFO 16512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-07-04T15:46:06.195+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : Started Application in 0.262 seconds (process running for 194.676)
+2024-07-04T15:46:06.196+08:00  INFO 16512 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-07-04T15:46:15.133+08:00  INFO 16512 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-07-04T15:46:15.140+08:00  INFO 16512 --- [Thread-20] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-04T15:46:15.150+08:00  INFO 16512 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-07-04T15:46:15.153+08:00  INFO 16512 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2024-07-04T15:46:15.205+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : Starting Application using Java 21.0.2 with PID 16512 (D:\后端\springboot-hello\target\classes started by 黑羽同学 in D:\后端\springboot-hello)
+2024-07-04T15:46:15.206+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-07-04T15:46:15.318+08:00  INFO 16512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-07-04T15:46:15.319+08:00  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-04T15:46:15.319+08:00  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2024-07-04T15:46:15.368+08:00  INFO 16512 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-04T15:46:15.371+08:00  INFO 16512 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 164 ms
+2024-07-04T15:46:15.433+08:00  WARN 16512 --- [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-6 - idleTimeout is close to or more than maxLifetime, disabling it.
+2024-07-04T15:46:15.433+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2024-07-04T15:46:15.434+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-6 - Driver does not support get/set network timeout for connections. (feature not supported)
+2024-07-04T15:46:15.434+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.hsqldb.jdbc.JDBCConnection@60b70326
+2024-07-04T15:46:15.434+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2024-07-04T15:46:15.502+08:00  INFO 16512 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-04T15:46:15.506+08:00  INFO 16512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-07-04T15:46:15.507+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : Started Application in 0.32 seconds (process running for 203.989)
+2024-07-04T15:46:15.508+08:00  INFO 16512 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-07-04T15:46:29.492+08:00  INFO 16512 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-07-04T15:46:29.494+08:00  INFO 16512 --- [Thread-24] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-04T15:46:29.497+08:00  INFO 16512 --- [Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2024-07-04T15:46:29.499+08:00  INFO 16512 --- [Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2024-07-04T15:46:29.553+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : Starting Application using Java 21.0.2 with PID 16512 (D:\后端\springboot-hello\target\classes started by 黑羽同学 in D:\后端\springboot-hello)
+2024-07-04T15:46:29.553+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-07-04T15:46:29.659+08:00  INFO 16512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-07-04T15:46:29.659+08:00  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-04T15:46:29.659+08:00  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2024-07-04T15:46:29.673+08:00  INFO 16512 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-04T15:46:29.673+08:00  INFO 16512 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 118 ms
+2024-07-04T15:46:29.685+08:00  WARN 16512 --- [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-7 - idleTimeout is close to or more than maxLifetime, disabling it.
+2024-07-04T15:46:29.685+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2024-07-04T15:46:29.686+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-7 - Driver does not support get/set network timeout for connections. (feature not supported)
+2024-07-04T15:46:29.686+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection org.hsqldb.jdbc.JDBCConnection@6fd23a3b
+2024-07-04T15:46:29.686+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2024-07-04T15:46:29.748+08:00  INFO 16512 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-04T15:46:29.754+08:00  INFO 16512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-07-04T15:46:29.756+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : Started Application in 0.222 seconds (process running for 218.237)
+2024-07-04T15:46:29.757+08:00  INFO 16512 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-07-04T15:57:40.251+08:00  INFO 16512 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 15 class path changes (0 additions, 15 deletions, 0 modifications)
+2024-07-04T15:57:40.254+08:00  INFO 16512 --- [Thread-28] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-04T15:57:40.257+08:00  INFO 16512 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2024-07-04T15:57:40.260+08:00  INFO 16512 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2024-07-04T15:57:46.966+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : Starting Application using Java 21.0.2 with PID 16512 (D:\后端\springboot-hello\target\classes started by 黑羽同学 in D:\后端\springboot-hello)
+2024-07-04T15:57:46.966+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-07-04T15:57:47.065+08:00  INFO 16512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-07-04T15:57:47.066+08:00  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-04T15:57:47.066+08:00  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2024-07-04T15:57:47.082+08:00  INFO 16512 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-07-04T15:57:47.082+08:00  INFO 16512 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 115 ms
+2024-07-04T15:57:47.096+08:00  WARN 16512 --- [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-8 - idleTimeout is close to or more than maxLifetime, disabling it.
+2024-07-04T15:57:47.097+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2024-07-04T15:57:47.097+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-8 - Driver does not support get/set network timeout for connections. (feature not supported)
+2024-07-04T15:57:47.097+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection org.hsqldb.jdbc.JDBCConnection@75d122cc
+2024-07-04T15:57:47.097+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2024-07-04T15:57:47.107+08:00  WARN 16512 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'createWebMvcConfigurer' defined in com.itranswarp.learnjava.Application: Failed to instantiate [org.springframework.web.servlet.config.annotation.WebMvcConfigurer]: Illegal arguments to factory method 'createWebMvcConfigurer'; args: {}
+2024-07-04T15:57:47.108+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2024-07-04T15:57:47.110+08:00  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2024-07-04T15:57:47.111+08:00  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-04T15:57:47.116+08:00  INFO 16512 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-04T15:57:47.119+08:00 ERROR 16512 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'createWebMvcConfigurer' defined in com.itranswarp.learnjava.Application: Failed to instantiate [org.springframework.web.servlet.config.annotation.WebMvcConfigurer]: Illegal arguments to factory method 'createWebMvcConfigurer'; args: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:652)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:640)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1324)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1161)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:915)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.itranswarp.learnjava.Application.main(Application.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.config.annotation.WebMvcConfigurer]: Illegal arguments to factory method 'createWebMvcConfigurer'; args: {}
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:157)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	... 22 common frames omitted
+Caused by: java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.checkReceiver(DirectMethodHandleAccessor.java:197)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:99)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139)
+	... 23 common frames omitted
+
+2024-07-04T16:32:32.003+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : Starting Application using Java 21.0.2 with PID 16512 (D:\后端\springboot-hello\target\classes started by 黑羽同学 in D:\后端\springboot-hello)
+2024-07-04T16:32:32.004+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-07-04T16:32:32.008+08:00  WARN 16512 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: file [D:\后端\springboot-hello\target\classes\com\itranswarp\learnjava\Application$1.class]
+2024-07-04T16:32:32.010+08:00 ERROR 16512 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: file [D:\后端\springboot-hello\target\classes\com\itranswarp\learnjava\Application$1.class]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:462)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:316)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:276)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:290)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:244)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:197)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:165)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:397)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:283)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:745)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:565)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.itranswarp.learnjava.Application.main(Application.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.io.IOException: ASM ClassReader failed to parse class file - probably due to a new Java class file version that isn't supported yet: file [D:\后端\springboot-hello\target\classes\com\itranswarp\learnjava\Application$1.class]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:59)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.core.type.classreading.CachingMetadataReaderFactory.getMetadataReader(CachingMetadataReaderFactory.java:122)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:434)
+	... 23 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 65
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:199)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:180)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:166)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:287)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:56)
+	... 27 common frames omitted
+
+2024-07-04T16:36:53.325+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : Starting Application using Java 21.0.2 with PID 16512 (D:\后端\springboot-hello\target\classes started by 黑羽同学 in D:\后端\springboot-hello)
+2024-07-04T16:36:53.326+08:00  INFO 16512 --- [restartedMain] com.itranswarp.learnjava.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-07-04T16:36:53.328+08:00  WARN 16512 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: file [D:\后端\springboot-hello\target\classes\com\itranswarp\learnjava\Application$1.class]
+2024-07-04T16:36:53.330+08:00 ERROR 16512 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: file [D:\后端\springboot-hello\target\classes\com\itranswarp\learnjava\Application$1.class]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:462)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:316)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:276)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:290)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:244)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:197)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:165)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:397)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:283)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:745)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:565)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.itranswarp.learnjava.Application.main(Application.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.io.IOException: ASM ClassReader failed to parse class file - probably due to a new Java class file version that isn't supported yet: file [D:\后端\springboot-hello\target\classes\com\itranswarp\learnjava\Application$1.class]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:59)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.core.type.classreading.CachingMetadataReaderFactory.getMetadataReader(CachingMetadataReaderFactory.java:122)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:434)
+	... 23 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 65
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:199)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:180)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:166)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:287)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:56)
+	... 27 common frames omitted
+
+2024-07-04T17:36:44.543+08:00  INFO 15256 --- [restartedMain] com.itranswarp.learnjava.Application     : Starting Application using Java 21.0.2 with PID 15256 (D:\后端\springboot-hello\target\classes started by 黑羽同学 in D:\后端\springboot-hello)
+2024-07-04T17:36:44.545+08:00  INFO 15256 --- [restartedMain] com.itranswarp.learnjava.Application     : No active profile set, falling back to 1 default profile: "default"
+2024-07-04T17:36:44.591+08:00  INFO 15256 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-04T17:36:44.591+08:00  INFO 15256 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-04T17:36:45.392+08:00  INFO 15256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-07-04T17:36:45.399+08:00  INFO 15256 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-04T17:36:45.400+08:00  INFO 15256 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2024-07-04T17:36:45.436+08:00  INFO 15256 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-04T17:36:45.437+08:00  INFO 15256 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 845 ms
+2024-07-04T17:36:45.518+08:00  WARN 15256 --- [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2024-07-04T17:36:45.519+08:00  INFO 15256 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-04T17:36:45.805+08:00  INFO 15256 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2024-07-04T17:36:45.806+08:00  INFO 15256 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.hsqldb.jdbc.JDBCConnection@4fca15c0
+2024-07-04T17:36:45.807+08:00  INFO 15256 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-04T17:36:46.128+08:00  INFO 15256 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-04T17:36:46.156+08:00  INFO 15256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-07-04T17:36:46.165+08:00  INFO 15256 --- [restartedMain] com.itranswarp.learnjava.Application     : Started Application in 1.892 seconds (process running for 2.319)
+2024-07-04T17:36:48.666+08:00  INFO 15256 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-04T17:36:48.670+08:00  INFO 15256 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
